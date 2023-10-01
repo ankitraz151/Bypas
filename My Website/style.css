@@ -1,0 +1,135 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  Chiller;
+    background-color: #94804e; /* Default background color */
+    color: #e13a10;
+    transition: background-color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #509b9b;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Rounded Toggle switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f81f1f;
+    border-radius: 34px; /* Make it rounded */
+    transition: 0.4s;
+}
+
+.slider:before {
+    border-radius: 50%; /* Make the slider knob round */
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #00ff00; /* Light Green */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+/* Your existing CSS styles */
+
+/* Hide the popup by default */
+.popup {
+    display: none;
+    position:relative;
+    top: 0;
+    left: 20%;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: black; /* Black background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide overflow content */
+}
+
+.typing-text {
+    color: #00ff00; /* Green text color */
+    font-family: "Courier New", Courier, monospace; /* Monospace font */
+    font-size: 16px;
+    white-space: pre;
+    overflow: hidden; /* Hide overflow content */
+    border-right: 2px solid #00ff00; /* Blinking cursor effect */
+    animation: typing 8s steps(60) 1s forwards;
+}
+
+
+
+.switch input:checked + .slider + #popup {
+    display: flex; /* Show the popup when the switch is checked */
+}
+
+
+
+/* Your existing CSS styles */
+
